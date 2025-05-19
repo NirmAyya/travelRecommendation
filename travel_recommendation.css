@@ -1,0 +1,123 @@
+/* Basic CSS for the navigation bar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #9449EB;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Basic CSS for the form elements */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 200px;
+    padding: 5px;
+}
+
+button {
+    padding: 7px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Basic CSS for the report section */
+h2 {
+    margin-top: 30px;
+}
+
+#report,
+#result {
+    padding: 10px;
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+#result {
+    height: 400px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#result img {
+    width: 200px;
+    height: 100px;
+}
+
+/* Basic CSS for the background section */
+body {
+    background-image: url('miamiBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+/* Title styling remains unchanged */
+.title {
+    font-size: 48px; /* Enlarges text */
+    font-weight: bold; /* Makes text bold */
+    color: white; /* Changes text color */
+    text-align: left;
+    margin-top: 20vh; /* Moves it down a bit */
+    font-family: Garamond, serif;
+    padding: 30px; /* Adds spacing */
+    padding-left: 70px;
+}
+
+p {
+    font-size: 20px; /* Adjusts text size */
+    font-family: "Georgia", serif; /* Changes font */
+    color: white; /* Sets text color */
+    margin-left: 70px; /* Aligns with the title */
+    line-height: 1.6; /* Improves readability */
+}
