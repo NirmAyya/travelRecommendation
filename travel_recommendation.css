@@ -113,11 +113,43 @@ body {
     padding: 30px; /* Adds spacing */
     padding-left: 70px;
 }
+/* Title styling remains unchanged */
+.about {
+    font-size: 48px; /* Enlarges text */
+    font-weight: bold; /* Makes text bold */
+    color: white; /* Changes text color */
+    text-align: left;
+    margin-top: 10vh; /* Moves it down a bit */
+    font-family: Garamond, serif;
+    padding: 30px; /* Adds spacing */
+    padding-left: 70px;
+}
 
 p {
-    font-size: 20px; /* Adjusts text size */
-    font-family: "Georgia", serif; /* Changes font */
+    font-size: 15px; /* Adjusts text size */
+    font-family: Garamond, serif; /* Changes font */
     color: white; /* Sets text color */
     margin-left: 70px; /* Aligns with the title */
+    margin-top: -20px; /* Moves the paragraph up */
     line-height: 1.6; /* Improves readability */
+}
+
+.theTeam {
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: center; /* Centers horizontally */
+    gap: 20px; /* Adds spacing between title and list */
+    width: 100%; /* Ensures full width */
+}
+
+
+.teamTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+
+.team-list {
+    color: white;
+    font-size: 18px;
 }
