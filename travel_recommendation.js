@@ -1,4 +1,6 @@
 
+//results will store the reccomendations to show on the page
+let results=[];
 
 
 function sendMessage(){
@@ -69,8 +71,17 @@ switch (true) {
 
 }
 
-function loadRecommendations(country){
+function loadRecommendations(field){
 
 
 
+}
+
+function displayRecommendations(){
+
+}
+
+function resetPage(){
+    results=[];
+    displayRecommendations();
 }
