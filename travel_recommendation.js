@@ -11,3 +11,12 @@ function sendMessage(){
     document.getElementById("message").value="";
 }
 
+
+
+fetch('travel_recommendation_api.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data); 
+    })
+    .catch(error => console.error('Error loading JSON:', error));
+
