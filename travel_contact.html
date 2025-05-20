@@ -15,17 +15,15 @@
         </ul>
     </nav>
 
-    <div>
-        <h1>Contact us</h1>
-        <label for="bookName">Book Name:</label><br>
-        <input type="text" id="bookName"><br><br>
-        <label for="authorName">Author Name:</label><br>
-        <textarea id="authorName" rows="4"></textarea><br><br>
-        <label for="bookDescription">Book Description:</label><br>
-        <textarea id="bookDescription" rows="4"></textarea><br><br>
-        <label for="pagesNumber">No. of Pages:</label><br>
-        <input type="number" id="pagesNumber"><br><br>
-        <button onclick="addBook()">Add Book</button>
+    <div class="contact-section">
+        <h1>send us a message and we will get back to as soon as we can</h1>
+        <label for="name">Your name:</label><br>
+        <input type="text" id="name"><br><br>
+        <label for="email">your email:</label><br>
+        <input type="text" id="email"><br><br>
+        <label for="message">message:</label><br>
+        <textarea id="message" rows="4"></textarea><br><br>
+       <button onclick="sendMessage()">Send</button>
     <div>
 
 
@@ -33,6 +31,6 @@
 
 
 
-    <script src="./travel_recommendations.js"></script>
+    <script src="./travel_recommendation.js"></script>
 </body>
 </html>

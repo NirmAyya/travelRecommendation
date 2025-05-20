@@ -94,7 +94,7 @@ h2 {
 
 /* Basic CSS for the background section */
 body {
-    background-image: url('miamiBackground.jpg');
+    background-image: url('images/miamiBackground.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -153,3 +153,32 @@ p {
     color: white;
     font-size: 18px;
 }
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    height: 100vh; /* Takes full viewport height */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Garamond, serif;
+}
+
+.contact-section button {
+    background-color: pink; /* Change to your preferred color */
+    color: white; /* Ensures text is readable */
+    border: none;
+    font-size: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.contact-section textarea {
+    width: 100%; /* Makes it take up the full width of its container */
+    max-width: 600px; /* Ensures it doesn't stretch too much */
+    padding: 10px; /* Adds inner spacing for better appearance */
+    font-size: 16px; /* Improves text readability */
+}
+
