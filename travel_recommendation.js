@@ -22,10 +22,16 @@ fetch('travel_recommendation_api.json')
 function search(){
 
 //lists of keywords to make searching more streamlined
-const BeachVariations=["beach","beaches","beache","beech",]
+const BeachVariations=["beach","beaches","beache","beech",];
 
 //keywords for temples
-const templeVariations=["temple","temples","tempel","tempels"]
+const templeVariations=["temple","temples","tempel","tempels"];
+
+//keywords for countries
+const australiaVariations=["australia","oceania","astralia","ostralia","sydney","melbourne"];
+const japanVariations=["japan","tokyo","kyoto","rising sun","japans"];
+const brazilVariations=["japan","rio de janeiro","rio","são paulo","sao paulo"];
+
 
 
 
@@ -45,8 +51,17 @@ switch (true) {
         
 
         break;
+    case australiaVariations.includes(searchText):
+
+        break;
+    case japanVariations.includes(searchText):
+
+    break;
+    case brazilVariations.includes(searchText):
+
+    break;
     default:
-        //in the event that text is not matched to 
+        
         
 
 }
@@ -54,7 +69,7 @@ switch (true) {
 
 }
 
-function loadRecommendations(){
+function loadRecommendations(country){
 
 
 
