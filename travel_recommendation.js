@@ -24,10 +24,17 @@ function search() {
     const japanVariations = ["japan", "tokyo", "kyoto", "rising sun", "japans"];
     const brazilVariations = ["brazil", "rio de janeiro", "rio", "são paulo", "sao paulo"];
 
+    // Get user input and target elements
     const searchText = document.getElementById("travelInput").value.trim().toLowerCase();
-    const recommendationsTitle = document.querySelector("h2"); // Target the <h2> element
-    recommendationsTitle.innerHTML = "Searching..."; // Temporary update while fetching
+    const recommendationsTitle = document.querySelector("h2"); 
+    const resultsContainer = document.getElementById("results"); // Properly define resultsContainer
 
+    // Show loading state
+    resultsContainer.innerHTML = ""; // Clear previous results
+
+
+
+    // Fetch JSON data
     fetch("travel_recommendation_api.json")
         .then(response => response.json()) // Convert response to JSON
         .then(data => {
@@ -50,13 +57,17 @@ function search() {
                     results = []; // No match found
                 }
             }
+            
 
-            // Update the <h2> with the search results
+            // Ensure results are correctly displayed
             if (results.length > 0) {
-                recommendationsTitle.innerHTML = ""; // Clear previous text
+                recommendationsTitle.textContent = "Search Results"; 
 
                 results.forEach(item => {
-                    // Create elements
+                    // Create a div for each result
+                    let itemDiv = document.createElement("div");
+                    itemDiv.classList.add("card"); 
+
                     let itemImage = document.createElement("img");
                     let itemName = document.createElement("h3");
                     let itemDescription = document.createElement("p");
@@ -67,21 +78,23 @@ function search() {
                     itemName.textContent = item.name;
                     itemDescription.textContent = item.description;
 
-                    // Append to <h2> instead of #results
-                    recommendationsTitle.appendChild(itemImage);
-                    recommendationsTitle.appendChild(itemName);
-                    recommendationsTitle.appendChild(itemDescription);
+                    // Append elements in the correct order
+                    itemDiv.appendChild(itemImage);
+                    itemDiv.appendChild(itemName);
+                    itemDiv.appendChild(itemDescription);
+
+                    // Append itemDiv inside #results div
+                    resultsContainer.appendChild(itemDiv);
                 });
             } else {
-                recommendationsTitle.innerHTML = "No results found.";
+                recommendationsTitle.textContent = "No results found.";
             }
         })
         .catch(error => {
             console.error("Error loading JSON:", error);
-            recommendationsTitle.innerHTML = "Error loading data.";
+            recommendationsTitle.textContent = "Error loading data.";
         });
-    }
-
+}
 
 
 function resetPage(){

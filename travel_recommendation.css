@@ -66,10 +66,7 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Basic CSS for the report section */
-h2 {
-    margin-top: 30px;
-}
+
 
 #report,
 #result {
@@ -180,5 +177,38 @@ p {
     max-width: 600px; /* Ensures it doesn't stretch too much */
     padding: 10px; /* Adds inner spacing for better appearance */
     font-size: 16px; /* Improves text readability */
+}
+
+/*display result*/
+#results {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap */
+    gap: 15px; /* Adds spacing between elements */
+    justify-content: center; /* Centers results */
+    padding: 10px;
+}
+
+h2{
+    color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align elements to the LEFT */
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    max-width: 400px;
+}
+
+.card h3,
+.card p {
+    text-align: left;
+    font-size: 1.2em;
+    margin-top: 5px;
+    padding-left: 0; /* Remove extra padding */
+    padding-right: 50px;
 }
 
