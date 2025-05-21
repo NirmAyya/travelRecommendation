@@ -27,16 +27,16 @@ function search() {
     // Get user input and target elements
     const searchText = document.getElementById("travelInput").value.trim().toLowerCase();
     const recommendationsTitle = document.querySelector("h2"); 
-    const resultsContainer = document.getElementById("results"); // Properly define resultsContainer
+    const resultsContainer = document.getElementById("results"); 
 
     // Show loading state
-    resultsContainer.innerHTML = ""; // Clear previous results
+    resultsContainer.innerHTML = ""; 
 
 
 
     // Fetch JSON data
     fetch("travel_recommendation_api.json")
-        .then(response => response.json()) // Convert response to JSON
+        .then(response => response.json()) 
         .then(data => {
             let results = [];
 
@@ -99,6 +99,10 @@ function search() {
 
 function resetPage(){
     results=[];
-    resultsContainer.innerHTML = "";
+     const resultsContainer = document.getElementById("results");
+     const recommendationsTitle = document.querySelector("h2");
+    resultsContainer.innerHTML = ""; 
+    recommendationsTitle.textContent = "search for travel destinations"; 
+   
 }
 
