@@ -20,7 +20,7 @@ function search() {
     // Lists of keywords to make searching more streamlined
     const BeachVariations = ["beach", "beaches", "beache", "beech"];
     const templeVariations = ["temple", "temples", "tempel", "tempels"];
-    const australiaVariations = ["australia", "oceania", "astralia", "ostralia", "sydney", "melbourne"];
+    const australiaVariations = ["australia", "oceania", "astralia", "ostralia", "sydney", "melbourne", "country"];
     const japanVariations = ["japan", "tokyo", "kyoto", "rising sun", "japans"];
     const brazilVariations = ["brazil", "rio de janeiro", "rio", "são paulo", "sao paulo"];
 
